@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8081"
+    volumes:
+      - ./main.lua:/code/app/main.lua
+  redis:
+    image: "redis:alpine"
